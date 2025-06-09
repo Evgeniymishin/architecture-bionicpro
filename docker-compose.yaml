@@ -42,11 +42,11 @@ services:
       REACT_APP_KEYCLOAK_CLIENT_ID: reports-frontend
   api:
     build:
-      context: ./API
+      context: ./api
     ports:
       - "8000:8000"
     environment:
-      API_APP_KEYCLOAK_INTERNAL_URL: http://keycloak:8080
+      API_APP_KEYCLOAK_INTERNAL_URL: http://localhost:8080
       API_APP_KEYCLOAK_REALMS_URL: http://localhost:8080/realms/reports-realm
       API_APP_KEYCLOAK_REALM: reports-realm
     depends_on:
